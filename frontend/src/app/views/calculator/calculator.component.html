@@ -1,0 +1,94 @@
+<header class="bg-primary no-border has-shadow">
+    <nav class="horizontal menu-container">
+        <a class="menu-item has-text-primary is-title-large" href="#main">MAIN</a>
+        <a class="menu-item has-text-primary is-title-large" href="#about">ABOUT</a>
+        <a class="menu-item has-text-primary is-title-large" href="#contact">CONTACT</a>
+    </nav>
+</header>
+<section class="main vertical no-border" id="main">
+    <div class="filter">
+        <label for="filter">Filter By:</label>
+        <select #selected (change)="ChangedOption(selected.value)" name="filter" id="filter" class="no-border bg-primary has-text-light rounded has-shadow">
+            <option value="Pending">Pending</option>
+            <option value="Returned">Returned</option>
+        </select>
+    </div>
+    <table class="has-shadow no-border">
+        <tr class="is-title-small has-text-primary">
+            <th>ID</th>
+            <th>ITEM</th>
+            <th>LEADER</th>
+            <th>TEAM</th>
+            <th>START DATE</th>
+            <th>DUE DATE</th>
+            <th>RETURNED DATE</th>
+            <th>STATUS</th>
+            <th>FINE</th>
+        </tr>
+        <tr *ngFor="let Fine of TempList" class="has-text-light">
+            <td>{{Fine._id}}</td>
+            <td>
+                <div class="vertical" *ngFor="let item of Fine.items"> 
+                    <p>{{item.name}}</p>
+                </div>
+            </td>
+            <td>{{Fine.leader.name}}</td>
+            <td>{{Fine.team.name}}</td>
+            <td>{{Fine.startDate}}</td>
+            <td>{{Fine.dueDate}}</td>
+            <td *ngIf="Fine.returnedDate">{{Fine.returnedDate}}</td>
+            <td *ngIf="!Fine.returnedDate">N/A</td>      
+            <td>{{Fine.status}}</td>
+            <td>$ {{Fine.fine}} USD</td>
+        </tr>
+    </table>
+</section>
+
+<section class="about vertical" id="about">
+    <div class="back-title has-text-primary is-title-large">
+        <h1>ABOUT</h1>
+    </div>
+    <div class="container vertical no-border has-shadow rounded">
+        <div class="title-container">
+            <h3 class="is-title-small has-text-primary">TECHNOLOGIES USED</h3>
+        </div>
+        <div class="content-container">
+            <h5 class="is-subtitle-large has-text-light">MEAN STACK</h5>
+            <ul class="has-text-link">
+                <li><a href="https://docs.mongodb.com/">MONGODB</a></li>
+                <li><a href="https://expressjs.com/">EXPRESS JS</a></li>
+                <li><a href="https://angular.io/docs">ANGULAR</a></li>
+                <li><a href="https://nodejs.org/en/docs/">NODE JS</a></li>
+            </ul>
+        </div>
+        <div class="title-container">
+            <h3 class="is-title-small has-text-primary">APP BACKGROUND</h3>
+        </div>
+        <div class="content-container">
+            <p class="has-text-light">APLICACION QUE SE ENCARGA DE CALCULAR LA MULTA QUE DEBE, EN CASO DE QUE EL ITEM PRESTADO NO HAYA SIDO 
+                ENTREGADO EN LA FECHA ESTABLECIDA</p>
+        </div>
+        <div class="title-container">
+            <h3 class="is-title-small has-text-primary">USEFUL RESOURCES</h3>
+        </div>
+        <div class="items-container content-container horizontal">
+            <div class="item has-shadow rounded">
+                <iframe width="200" height="120" src="https://www.youtube.com/embed/V-CeWkz1MNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="item has-shadow rounded">
+                <iframe width="200" height="120" src="https://www.youtube.com/embed/cFyz3OplB08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>            
+        </div>                
+    </div>
+</section>
+
+<section class="contact vertical" id="contact">
+    <div class="back-title has-text-primary is-title-large">
+        <h1>CONTACT</h1>
+    </div>
+    <div class="icons-container container horizontal no-border has-shadow rounded">
+        <a href="https://github.com/possomartin/fine-calculator.git" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:martin.posso@udla.edu.ec"><i class="fas fa-at"></i></a>
+        <a href="https://www.linkedin.com/in/martin-posso/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>    
+</section>
