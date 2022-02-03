@@ -1,16 +1,11 @@
 # fine-calculator
 App to calculate fine, wheter a team has given back the taken item on time or not.
 
-<br>
 DESCRIPCION: Aplicación realizada con las tecnologías de MEAN STACK {
-<br>
-	• MONGODB: https://docs.mongodb.com/
-<br>
-	• EXPRESS JS: https://expressjs.com/
-<br>
-	• ANGULAR: https://angular.io/docs
-<br>
-	• NODE JS: https://nodejs.org/en/docs/
+### `MONGODB: https://docs.mongodb.com/`
+### `EXPRESS JS: https://expressjs.com/`
+### `ANGULAR: https://angular.io/docs`
+### `NODE JS: https://nodejs.org/en/docs/`
 }
 <br>
 que cuenta con una arquitectura MVC para poder separar los modelos de las vistas a través de controladores. 
@@ -28,7 +23,7 @@ APP EN HEROKU: https://fine-calculator.herokuapp.com/calculator
 GITHUB: https://github.com/possomartin/fine-calculator
 <br>
 
-CONTACTO: 
+### `CONTACTO: `
 <br>
 	• martin.posso@udla.edu.ec (institucional)
 <br>
@@ -37,7 +32,7 @@ CONTACTO:
 	• LINKEDIN: https://www.linkedin.com/in/martin-posso/
 <br>
 
-DOCUMENTACION:
+### `DOCUMENTACION:`
 <br>
 	• MONGODB: https://docs.mongodb.com/
 <br>
@@ -46,8 +41,8 @@ DOCUMENTACION:
 	• ANGULAR: https://angular.io/docs
 <br>
 	• NODE JS: https://nodejs.org/en/docs/
- <br>
-RECURSOS UTILES DE APRENDIZAJE:
+
+### `RECURSOS UTILES DE APRENDIZAJE:`
 <br>
 	• Video #1: https://www.youtube.com/watch?v=V-CeWkz1MNQ&ab_channel=Devstackr
 <br>
@@ -57,6 +52,9 @@ RECURSOS UTILES DE APRENDIZAJE:
 <br>
 	• GITHUB #2: https://github.com/Devstackr/task-manager-mean-stack/blob/master/frontend/src/app/app-routing.module.ts
 <br>
+
+### `USO LOCAL`
+
 Para correr localmente la aplicacion cambiar las siguientes variables:
 <br>
   • UrlDomain: 'http://localhost:3000' (BackEnd - Index.js)
